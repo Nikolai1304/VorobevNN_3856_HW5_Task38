@@ -16,31 +16,42 @@ double[]GetArray (int size, int minValue, int maxValue)
     return res;
 }
 Console.WriteLine(String.Join(" ", array));
+// Console.WriteLine("Минимальный элемент массива  =   "  + array.Min());         // простой вывод мин
+// System.Console.WriteLine("Максимальный элемент массива  =   "  +array.Max());   // простой вывод макс
+
+
+
 
 void dif(double[]array)
 {
 int i=0;
-double max = 10;
+double max = array[0];
+double min = array[0];
 array[i] = max;
+array[i] = min;
 for (; i<array.Length; i++)
 {
   if (array[i]>max)
   {
       max = array[i];
   }
+  if (array[i]<min)
+  {
+      min = array[i];
+  }
 }
 System.Console.WriteLine("Максимальный элемент массива =  " + max);
 
-int j=0;
-double min = 100;
-array[j] = min;
-for (; j<array.Length; j++)
-{
-  if (array[j]<min)
-  {
-      min = array[j];
-  }
-}
+// int j=0;
+// double min = 100;
+// array[j] = min;
+// for (; j<array.Length; j++)
+// {
+//   if (array[j]<min)
+//   {
+//       min = array[j];
+//   }
+// }
 System.Console.WriteLine("Минимальный элемент массива =  " + min);
 
 double dif = max - min;
